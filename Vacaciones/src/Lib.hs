@@ -61,7 +61,7 @@ acompaniado :: Turista -> Turista
 acompaniado unTurista = unTurista { viajaSolo = False }
 
 hacerExcursion :: Excursion -> Turista -> Turista
-hacerExcursion unaExcurion unTurista = (cambiarStressPorcentual (- 10) . unaExcurion) unTurista
+hacerExcursion unaExcursion unTurista = (cambiarStressPorcentual (- 10) . unaExcursion) unTurista
 
 cambiarStressPorcentual :: Int -> Turista -> Turista
 cambiarStressPorcentual porcentual unTurista = cambiarStress (div (porcentual * nivelDeStress unTurista) 100) unTurista
